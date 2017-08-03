@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText,ContentDescription">
+
+    <LinearLayout
+        android:id="@+id/donorInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="left"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/bloodType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blood Type: O+"
+            android:textColor="@color/colorLightGreen"
+            android:textStyle="bold"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/donarSince"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Donor Since: 2017"
+            android:textColor="@color/colorLightGreen"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:textSize="20dp"/>
+        <!--android:layout_marginRight="20dp"
+            android:gravity="right"-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/optimalDonationContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:id="@+id/imageOptimalDonation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_user" />
+
+            <LinearLayout
+                android:id="@+id/firstRow"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/imageOptimalDonation"
+                android:layout_toRightOf="@+id/imageOptimalDonation"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/optimalDonation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Optimal Donation"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="25sp"
+                    android:paddingLeft="20dp"
+                    android:background="@null"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/optimalDonationDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8/01/17 - 8/10/17"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:layout_below="@+id/imageOptimalDonation"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:id="@+id/optimalDonationType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Platelets"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:layout_below="@+id/optimalDonationDate"
+                android:layout_marginTop="5dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/appointmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:id="@+id/imageAppointment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_user" />
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/imageAppointment"
+                android:layout_toRightOf="@+id/imageAppointment"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/appointment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Appointments"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="25sp"
+                    android:paddingLeft="20dp"
+                    android:background="@null"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/appointmentDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="08/05/17"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:layout_below="@+id/imageAppointment"
+                android:layout_marginTop="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/appointmentDate"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/appointmentText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Appointment Date"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:background="@null"/>
+
+                <TextView
+                    android:id="@+id/appointmentDRBC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Double Red Blood Cells"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:background="@null"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/donationHistoryContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:id="@+id/imageDonationHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_user" />
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/imageDonationHistory"
+                android:layout_toRightOf="@+id/imageDonationHistory"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/donationHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Donation History"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="25sp"
+                    android:paddingLeft="20dp"
+                    android:background="@null"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/donationHistoryInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Platelets, 12/12/16"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:layout_below="@+id/imageDonationHistory"
+                android:layout_marginTop="15dp" />
+
+            <LinearLayout
+                android:layout_below="@+id/donationHistoryInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/donationHistoryLabel1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last Donated"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:background="@null"/>
+
+                <TextView
+                    android:id="@+id/donationHistoryLabel2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="100pts"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:background="@null"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wellnessHistoryContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:id="@+id/imageWellnessHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_user" />
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/imageWellnessHistory"
+                android:layout_toRightOf="@+id/imageWellnessHistory"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/wellnessHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WellNess History"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="25sp"
+                    android:paddingLeft="20dp"
+                    android:background="@null"/>
+
+            </LinearLayout>
+
+           <!-- <TextView
+                android:id="@+id/wellnessHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8/01/17 - 8/10/17"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:layout_below="@+id/imageOptimalDonation"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:id="@+id/optimalDonationType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Platelets"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:layout_below="@+id/optimalDonationDate"
+                android:layout_marginTop="5dp"/>-->
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
